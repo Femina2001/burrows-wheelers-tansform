@@ -27,8 +27,8 @@ char* findLastChar(int* input_text,
 	char* bwt_arr = (char*)malloc(n * sizeof(char)); 
 	int i; 
 	for (i = 0; i < n; i++) { 
-		// Computes the last char which is given by 
-		// input_text[(suffix_arr[i] + n - 1) % n] 
+		
+		 input_text[(suffix_arr[i] + n - 1) % n] 
 		int j = suffix_arr[i] - 1; 
 		if (j < 0) 
 			j = j + n; 
@@ -39,7 +39,7 @@ char* findLastChar(int* input_text,
 	return bwt_arr; 
 } 
 
-// Driver program to test functions above 
+
 int main() 
 { 
 	char input_text[] = "Curneu MedTech Innovation is a health care technology firm 
